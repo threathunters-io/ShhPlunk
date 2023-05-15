@@ -10,7 +10,7 @@ g++ poc.cpp -o shhplunk && ./shhplunk
 
 ## How it works
 
-The `splunkd` uses several threads to transmit data, with two of them being:
+The `splunkd` process uses several threads to transmit data, with two of them being:
 
 1. The heartbeat thread. It sends regular events the be able to determine whether a forwarder is still active.
 2. A thread to send actual event data.
