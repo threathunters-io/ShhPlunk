@@ -39,10 +39,10 @@ std::vector<pid_t> get_pids() {
     	result.push_back(strtoul(s_pid.c_str(), NULL, 10));
     }
 
-	if(result.size() == 0 || result[0] == 0) {
-		throw std::runtime_error("splunkd process not found\n");
-	}
-	return result;
+    if(result.size() == 0 || result[0] == 0) {
+        throw std::runtime_error("splunkd process not found\n");
+    }
+    return result;
 }
 
 // get base address of splunkd process
