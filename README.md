@@ -15,7 +15,7 @@ The `splunkd` process uses several threads to transmit data, with two of them be
 1. The heartbeat thread. It sends regular events the be able to determine whether a forwarder is still active.
 2. A thread to send actual event data.
 
-This PoC targets the second one, while keeping heartbeats intact. This way, `splunkd` no longer forwards any event-related data. To achieve this, the respective thread is being patched during runtime.
+This PoC targets the second one, while keeping heartbeats intact. This way, `splunkd` no longer forwards any event-related data. To achieve this, the respective thread is being patched during runtime. This was tested with the Splunk Forwarder version `9.0.1`.
 
 A full writeup can be found [here](https://bananamafia.dev/post/shhplunk/).
 
